@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started — East River Strategy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="East River Strategy" class="logo-img" />
+                <span class="nav-logo-text">East River Strategy</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#insights">Insights</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <a href="get-started.html" class="nav-cta">Get Started</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="form-page">
+        <div class="form-wrapper">
+            <a href="index.html" class="back-link">← Back to home</a>
+
+            <span class="eyebrow">Start a Conversation</span>
+            <h1>Tell us what you're <span class="accent-word">working on.</span></h1>
+            <p class="form-intro">
+                The best engagements start with a good conversation. Share a little about your organization and the
+                challenge ahead, and one of our partners will be in touch within two business days.
+            </p>
+
+            <form class="form"
+                onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;text-align:center;font-size:1.125rem;color:var(--accent);padding:3rem 1rem;font-weight:500;&quot;>Thank you. We\'ll be in touch shortly.</p>';">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="company">Company Website</label>
+                    <input type="url" id="company" name="company" placeholder="https://yourcompany.com" />
+                </div>
+
+                <div class="form-field">
+                    <label for="focus">Area of Focus</label>
+                    <select id="focus" name="focus" required>
+                        <option value="" disabled selected>Select an area...</option>
+                        <option>Strategy &amp; Growth</option>
+                        <option>Culture &amp; Organization</option>
+                        <option>Leadership Development</option>
+                        <option>Transformation &amp; Change</option>
+                        <option>Not sure yet</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">What's on your mind?</label>
+                    <textarea id="message" name="message"
+                        placeholder="Tell us about the moment your organization is in, what you're trying to shape, and what's getting in the way."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">
+                    Send Message <span class="btn-arrow">→</span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-bottom">
+                <span>© 2026 East River Strategy. All rights reserved.</span>
+                <span><a href="index.html">Return home →</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const links = document.getElementById('navLinks');
+        toggle.addEventListener('click', () => links.classList.toggle('open'));
+    </script>
+</body>
+
+</html>
